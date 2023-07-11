@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Domain.Enteties;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -25,6 +25,9 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<Employee> Employees { get; set; }
 
+    public DbSet<Department> Departments { get; set; }
+    
+    public DbSet<Job> Jobs { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

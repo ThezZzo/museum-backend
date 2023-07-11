@@ -4,7 +4,7 @@ using Infrasctructure.Persistance;
 namespace Infrastructure.Repositories.Job;
 
 public class JobRepository : 
-    BaseRepository<Domain.Enteties.Job, ApplicationDbContext> , 
+    BaseRepository<Domain.Entities.Job, ApplicationDbContext> , 
     IJobRepository
 {
     

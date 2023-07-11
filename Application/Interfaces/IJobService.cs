@@ -1,5 +1,5 @@
 ﻿using System.Net;
-using Domain.Enteties;
+using Domain.Entities;
 
 namespace Application.Interfaces;
 

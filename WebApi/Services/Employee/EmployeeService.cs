@@ -11,12 +11,12 @@ public class EmployeeService
         _repository = employeeRepository;
     }
 
-    public async Task<Domain.Enteties.Employee> GetEmployee(int id, CancellationToken cancellationToken)
+    public async Task<Domain.Entities.Employee> GetEmployee(int id, CancellationToken cancellationToken)
     {
         return await _repository.GetEntityByIdAsync(id, cancellationToken);
     }
 
-    public async Task<IEnumerable<Domain.Enteties.Employee>> GetAllEmployee(CancellationToken cancellationToken)
+    public async Task<IEnumerable<Domain.Entities.Employee>> GetAllEmployee(CancellationToken cancellationToken)
     {
         return await _repository.GetAllEntityAsync(cancellationToken);
     }

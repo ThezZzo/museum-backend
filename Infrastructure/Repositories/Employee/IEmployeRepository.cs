@@ -2,7 +2,7 @@
 
 namespace Infrasctructure.Repositories.Employee;
 
-public interface IEmployeeRepository : IBaseRepository<Domain.Enteties.Employee>
+public interface IEmployeeRepository : IBaseRepository<Domain.Entities.Employee>
 {
     
 }

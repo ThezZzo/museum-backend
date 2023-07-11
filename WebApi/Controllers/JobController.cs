@@ -1,5 +1,5 @@
 ﻿using Application.Interfaces;
-using Domain.Enteties;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Services.Job;
 

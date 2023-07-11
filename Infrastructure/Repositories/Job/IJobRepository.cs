@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Repositories.Job;
 
-public interface IJobRepository : IBaseRepository<Domain.Enteties.Job>
+public interface IJobRepository : IBaseRepository<Domain.Entities.Job>
 {
     
 }

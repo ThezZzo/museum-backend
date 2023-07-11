@@ -7,7 +7,7 @@ using Infrasctructure.Repositories.Employee;
 namespace Infrastructure.Repositories.Employee;
 
 public class EmployeeRepository : 
-    BaseRepository<Domain.Enteties.Employee, ApplicationDbContext>, 
+    BaseRepository<Domain.Entities.Employee, ApplicationDbContext>, 
     IEmployeeRepository
 {
     public EmployeeRepository(ApplicationDbContext dbContext) : base(dbContext)

@@ -15,18 +15,18 @@ public class JobService : IJobService
     
     public async Task<bool> AddJob(string name, CancellationToken cancellationToken)
     {
-        var entity = Domain.Enteties.Job.Create(name);
+        var entity = Domain.Entities.Job.Create(name);
         await _repository.AddEntityAsync(entity, cancellationToken);
         return true;
     }
     
-    public async Task<IEnumerable<Domain.Enteties.Job>> GetAllJob(CancellationToken cancellationToken)
+    public async Task<IEnumerable<Domain.Entities.Job>> GetAllJob(CancellationToken cancellationToken)
     {
         var list = await _repository.GetAllEntityAsync(cancellationToken);
         return list;
     }
     
-    public async Task<Domain.Enteties.Job> GetByIdJob(int id, CancellationToken cancellationToken)
+    public async Task<Domain.Entities.Job> GetByIdJob(int id, CancellationToken cancellationToken)
     {
         var item = await _repository.GetEntityByIdAsync(id, cancellationToken);
         return item;
@@ -34,7 +34,7 @@ public class JobService : IJobService
     
     public async Task<bool> UpdateJob(string name, int id, CancellationToken cancellationToken)
     {
-        var entity = Domain.Enteties.Job.Create(name);
+        var entity = Domain.Entities.Job.Create(name);
         await _repository.UpdateEntityAsync(entity, id, cancellationToken);
         return true;
     }

@@ -4,7 +4,7 @@ using Infrasctructure.Persistance;
 namespace Infrasctructure.Repositories.Department;
 
 public class DepartmentRepository : 
-    BaseRepository<Domain.Enteties.Department, ApplicationDbContext>,
+    BaseRepository<Domain.Entities.Department, ApplicationDbContext>,
     IDepartmentRepository
 {
     
