@@ -6,7 +6,8 @@ using WebApi.Services.Job;
 namespace WebApi.Controllers;
 
 [ApiController]
-public class JobController
+[Route("api/[controller]")]
+public class JobController : ControllerBase
 {
     private readonly IJobService _service;
 
@@ -15,10 +16,8 @@ public class JobController
         _service = jobService;
     }
 
-    [HttpPost]
-    [Route("/api/job")]
-    public async Task<IEnumerable<Job>> Jobs(CancellationToken cancellationToken)
-    {
-        return await _service.GetAllJob(cancellationToken);
-    }
+    [HttpGet]
+    public async Task<IEnumerable<Job>> Get(CancellationToken cancellationToken) =>
+        await _service.GetAllJob(cancellationToken);
+
 }
