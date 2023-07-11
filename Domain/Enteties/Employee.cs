@@ -10,9 +10,11 @@ public class Employee
     
     private string SurName { get; init; }
     
-    private Department Department { get; init; }
+    public Department Department { get; init; }
+
+    private DateTime DateCreated { get; init; }
     
-    private string Job { get; init; }
+    public string Job { get; init; }
 
     public Employee Create(string name, string familyName, string surName, Department department, string job)
     {
@@ -22,7 +24,8 @@ public class Employee
             FamilyName = familyName,
             SurName = surName,
             Department = department,
-            Job = job
+            Job = job,
+            DateCreated = DateTime.UtcNow
         };
     }
     
