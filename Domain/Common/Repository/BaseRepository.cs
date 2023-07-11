@@ -6,7 +6,11 @@ public class BaseRepository<TEntity, TDbContext> : IBaseRepository<TEntity>
     where TEntity : class
     where TDbContext : DbContext
 {
-    
+    protected BaseRepository()
+    {
+        
+    }
+
     private readonly TDbContext _dbContext;
     private readonly DbSet<TEntity> _dbSet;
     
