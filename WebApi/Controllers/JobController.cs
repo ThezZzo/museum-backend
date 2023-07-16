@@ -23,6 +23,11 @@ public class JobController : ControllerBase
     [HttpPost]
     public async Task<bool> Post(Job job, CancellationToken cancellationToken) =>
         await _service.AddJob(job, cancellationToken);
-
+    
+    [HttpDelete]
+    public async Task<bool> Delete(int id, CancellationToken cancellationToken) =>
+        await _service.DeleteJob(id, cancellationToken);
+    
+    
     
 }
