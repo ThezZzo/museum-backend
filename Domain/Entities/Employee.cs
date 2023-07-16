@@ -15,6 +15,8 @@ public class Employee
     public DateTime DateCreated { get; init; }
     
     public IEnumerable<Job> Job { get; set; }
+    
+    public string ImagePath { get; set; }
 
     public Employee()
     {

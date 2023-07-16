@@ -5,7 +5,7 @@ namespace Application.Interfaces;
 
 public interface IJobService
 {
-    Task<bool> AddJob(string name, CancellationToken cancellationToken);
+    Task<bool> AddJob(Job job, CancellationToken cancellationToken);
 
     Task<IEnumerable<Job>> GetAllJob(CancellationToken cancellationToken);
 

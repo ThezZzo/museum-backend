@@ -13,10 +13,9 @@ public class JobService : IJobService
         _repository = jobRepository;
     }
     
-    public async Task<bool> AddJob(string name, CancellationToken cancellationToken)
+    public async Task<bool> AddJob(Domain.Entities.Job job, CancellationToken cancellationToken)
     {
-        var entity = Domain.Entities.Job.Create(name);
-        await _repository.AddEntityAsync(entity, cancellationToken);
+        await _repository.AddEntityAsync(Domain.Entities.Job.Create(job.Name), cancellationToken);
         return true;
     }
     

@@ -10,7 +10,8 @@ public static class DependencyInjection
 {
     public static IServiceCollection ConfigureEndpoints(this IServiceCollection services)
     {
-        services.AddScoped(typeof(IJobService), typeof(JobService));
+        services.AddScoped<IJobService, JobService>();
+        services.AddScoped<IJobRepository, JobRepository>();
         return services;
     }
     

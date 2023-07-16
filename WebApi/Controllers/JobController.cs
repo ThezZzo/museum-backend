@@ -20,4 +20,9 @@ public class JobController : ControllerBase
     public async Task<IEnumerable<Job>> Get(CancellationToken cancellationToken) =>
         await _service.GetAllJob(cancellationToken);
 
+    [HttpPost]
+    public async Task<bool> Post(Job job, CancellationToken cancellationToken) =>
+        await _service.AddJob(job, cancellationToken);
+
+    
 }
